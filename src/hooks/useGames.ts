@@ -13,7 +13,8 @@ export interface Game {
     name: string;
     background_image:string;
     parent_platforms:{platform:Platform}[] ; //an array of objects where each object has an platform item
-  }
+    metacritic:number;
+}
 
   interface FetchGameResponse{
     count:number;
