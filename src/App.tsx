@@ -10,6 +10,10 @@ function App() {
         base: `"nav" "main"`, //mobile
         lg: `"nav nav" "aside main"`, //large devices )wider than 1024
       }}
+      templateColumns={{
+        base: "1fr", //our column streches and takes all available space
+        lg: "200px 1fr",
+      }}
     >
       <GridItem area="nav">
         <Navbar />
@@ -17,7 +21,7 @@ function App() {
       <Show above="lg">
         {" "}
         {/*only show on large screens*/}
-        <GridItem area="aside">
+        <GridItem area="aside" paddingX={5}>
           <GenreList />
         </GridItem>
       </Show>
